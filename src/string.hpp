@@ -46,21 +46,21 @@ public:
 	String &operator += (const String &s);
 
 	//print this string
-	void print(std::ostream &out);
+	void print(std::ostream &out) const;
 
 	//read next word into this string
 	void read(std::istream &in);
 
 
 	//destructor for this string
-	~String()
+	~String();
 
 	bool in_bounds(int i) const {
 		return i >= 0 && i < strlen(buf);
 	}
 
 	static int strlen(const char *s);
-	static char *strcopy (char *dest, const char *src);
+	static char *strcpy (char *dest, const char *src);
 	static char *strncpy(char *dest, const char *src, int n);
 	static char *strcat(char *dest, const char *src);
 	static char *strncat(char *dest, const char *src, int n);
